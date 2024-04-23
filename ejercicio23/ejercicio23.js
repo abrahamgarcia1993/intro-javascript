@@ -10,8 +10,17 @@
  *  El año debe ser mayor que 0. (Recuerda la estructura switch).
  */
 
-function fechaIntroducida() {
+function fechaIntroducida(dia, mes, año) {
   //Escribe tu codigo aqui
+  let newMes=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","noviembre", "diciembre"]
+  if( mes===2 && dia> 1 && dia<29){
+    return `${dia} de ${newMes[mes-1]} del ${año}`
+  }
+  else if(dia>0 && dia<31 && mes>=1 && mes<2 & mes>2 && mes<=12 && typeof dia=="number" && typeof mes=="number" && typeof año=="number"){
+    return `${dia} de ${newMes[mes-1]} del ${año}`
+  }else{
+    return "Has introducido mal alguna parte de la fecha"
+  }
 }
 
 module.exports = { fechaIntroducida };

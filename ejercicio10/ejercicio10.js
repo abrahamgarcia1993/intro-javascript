@@ -13,8 +13,31 @@
  *  trabajador podria no entrar en ninguna categoria.
  */
 
-function nuevoSalario() {
+function nuevoSalario(sueldo, categoria) {
   //Escribe tu codigo aqui
-}
+  let aumento= sueldo
+  switch (categoria) {
+    case 1:
+      aumento=sueldo*1.15;
 
+    break;
+    case 2:
+      aumento= sueldo*1.1;
+      
+    break;
+    case 3:
+      aumento= sueldo*1.06;
+      
+    break;
+    case 4:
+      aumento= sueldo*1.03;
+      
+    break;
+    default:
+      return aumento
+
+    }
+    return aumento
+}
+console.log(nuevoSalario(1000, 6))
 module.exports = { nuevoSalario };

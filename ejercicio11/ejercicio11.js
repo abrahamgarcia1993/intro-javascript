@@ -13,8 +13,20 @@
  *  descuento correspondiente.
  */
 
-function descuentoCompra() {
+function descuentoCompra(monto) {
   //Escribe tu codigo aqui
+  let des=0
+if(monto<500){
+  return monto
+}else if(monto>500 && monto <= 1000){
+  return des=monto*0.95
+}else if(monto>1000 && monto<= 7000){
+  return des=monto*0.9
+}else if(monto>7000 && monto<=15000){
+  return des=monto*0.8
+}else{
+  return des=monto*0.75
+}
 }
 
 module.exports = { descuentoCompra };

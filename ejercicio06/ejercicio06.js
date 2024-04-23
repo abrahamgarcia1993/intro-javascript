@@ -5,8 +5,15 @@
  *  Pista: para determinar el resto de una división, se usa la operación módulo %.
  */
 
-function parImparNulo() {
+function parImparNulo(a) {
  //Escribe tu codigo aqui
+ if(a===0){
+    return"El numero es 0"
+ }else if(a%2===0){
+    return "El numero es par"
+ }else{
+    return "El numero es impar"
+ }
 }
-
+parImparNulo(2);
 module.exports = { parImparNulo };

@@ -15,4 +15,4 @@ function swapVariables(a, b) {
 //Escribe tu codigo aqui
 }
 
-3. Run your test with the command "npm test ejercicio01/ejercicio01.test.js" (note your terminal should be in root folder of the repository).
+3. Run your test with the command "npm test ejercicio11/ejercicio11.test.js" (note your terminal should be in root folder of the repository).

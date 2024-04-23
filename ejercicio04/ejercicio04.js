@@ -6,8 +6,17 @@
  *  que diga Has introducido uno o varios caracteres no validos
  */
 
-function sumOrMultiply() {
+function sumOrMultiply(a,b,c) {
  //Escribe tu codigo aqui
+ if(typeof a !=='number' || typeof b!=='number' || typeof c!=='number'){
+    return("Has introducido uno o varios caracteres no validos")
+ }else if(a<0){
+    let mult= a*b*c;
+    return mult
+ }else{
+    let suma= a+b+c;
+    return suma
+ }
 }
-
+console.log(sumOrMultiply(-1,3,5));
 module.exports = { sumOrMultiply };

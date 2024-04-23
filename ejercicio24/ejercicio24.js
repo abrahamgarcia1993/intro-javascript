@@ -13,8 +13,26 @@
  *  Si todo es correcto el algorimo debera imprimir 'NombreAlumno tu nota final es de NotaFinal sobre 10'
  */
 
-function notaAlumno() {
+
+
+function notaAlumno(nombre ,practica, problemas, teorica) {
   //Escribe tu codigo aqui
+  let mediaPractica=0
+  let mediaTeorica=0
+  let mediaProblemas=0
+  let media=0
+  if(typeof nombre!=="string" || nombre==""){
+    return "Error al recibir el nombre"
+  }else if(typeof practica!=="number" && typeof problemas!=="number" && typeof teorica!=="number" || 
+                  practica<1 || practica>10 || problemas<1 || problemas>10 || teorica<1 || teorica>10){
+              return "Ha habido un error con tus notas. Deben estar entre 1 y 10"
+            }else{
+              mediaPractica=practica*0.1;
+              mediaTeorica= teorica*0.4;
+              mediaProblemas= problemas*0.5;
+              media= mediaPractica+mediaProblemas+mediaTeorica;
+              return `${nombre} tu nota final es de ${media} sobre 10`
+            }
 }
 
 module.exports = { notaAlumno };

@@ -7,8 +7,18 @@
  *  La funcion retornara la suma
  */
 
-function sumaNPrimerosNumerosPares() {
+function sumaNPrimerosNumerosPares(n) {
   //Escribe tu codigo aqui
-}
+  let suma=0
+  //compruebo el doble de numeros ya que hay pares e impares
+  for(i=0; i<=(n*2); i++){
+    //aqui compruebo todos los numeros menos 1 ya que es par
+    if((n+i)%2==0 && i<n*2){
+      suma+=(n+i);
+    }
 
+  }
+  return suma
+}
+console.log(sumaNPrimerosNumerosPares(12));
 module.exports = { sumaNPrimerosNumerosPares };

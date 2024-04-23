@@ -5,8 +5,14 @@
  *  La funcion retornara la suma.
  */
 
-function calcularSumaNumerosNaturales(N) {
+function calcularSumaNumerosNaturales(n) {
   //Escribe tu codigo aqui
+  let suma=0
+  for(i=0; i<=n; i++){
+    suma=suma+i;
+    n
+  }
+  return suma
 }
-
+console.log(calcularSumaNumerosNaturales(5))
 module.exports = { calcularSumaNumerosNaturales };
