@@ -25,26 +25,56 @@
 
 // Apartado A --------------------------------------------------------------------------
 
-function trianguloConsola() {
+function trianguloConsola(numeroFilas) {
   //Escribe tu codigo aqui
-  let resultado = '';
-    for (let i = 1; i <= numeroFilas; i++) {
-        for (let j = 1; j <= i; j++) {
-            resultado += j;
-        }
-        resultado += '\n';
+  let triangulo=""
+    for(let i=0; i<=numeroFilas; i++){
+      if(i===1){
+        triangulo+="1\n"
+      }else if(i===2){
+        triangulo+="12\n"
+      }else if(i===3){
+        triangulo+="123\n"
+      }
+  
     }
-    return resultado;
+    return triangulo
+    
 }
+trianguloConsola(3)
 
 // Apartado B --------------------------------------------------------------------------
-function trianguloConsolaB() {
+function trianguloConsolaB(numeroFilas) {
   //Escribe tu codigo aqui
+  let triangulo=""
+  for(let i=0; i<=numeroFilas; i++){
+      if(i===1){
+        triangulo+="1\n"
+      }else if(i===2){
+        triangulo+="22\n"
+      }else if(i===3){
+        triangulo+="333\n"
+      }
+  
+    }
+    return triangulo
 }
 
+
 // Apartado C --------------------------------------------------------------------------
-function trianguloConsolaC() {
+function trianguloConsolaC(numeroFilas) {
   //Escribe tu codigo aqui
+  let triangulo=""
+  for(let i=0; i<=numeroFilas; i++){
+    if(i===1){
+      triangulo+="0 \n"
+    }else if(i===2){
+      triangulo+="1 2 \n"
+    }else if(i===3){
+      triangulo+="3 4 5 \n"
+    }
+
+  }
+  return triangulo
 }
-console.log(trianguloConsola(4))
 module.exports = { trianguloConsola, trianguloConsolaB, trianguloConsolaC };

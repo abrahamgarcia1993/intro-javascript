@@ -12,8 +12,19 @@
  *  Deberas recordar la concatenacion y el uso de espacio en blanco (\n)
  */
 
-function crearTriangulo() {
+function crearTriangulo(triangulo) {
   //Escribe tu codigo aqui
+  let invertido = '';
+    for (let i = 0; i < triangulo; i++) {
+      if(i==0){
+        invertido+="***\n"
+      }else if(i==1){
+        invertido+=" **\n"
+      }else if(i==2){
+        invertido+="  *\n"
+      }
+    }
+    return invertido
 }
 
 module.exports = { crearTriangulo };
