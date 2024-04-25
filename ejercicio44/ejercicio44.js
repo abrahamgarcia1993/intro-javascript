@@ -16,8 +16,25 @@
  * EJEMPLO: Si introduce 1,2,4. El usuario recibira 6.
  */
 
-function seleccionarNumeroMenu() {
+function seleccionarNumeroMenu(num1, num2, num3) {
   //Escribe tu codigo aqui
-}
+  if(num1<=5 && num1>0){
 
+  
+  if(num1===1){
+    return num2+num3
+  }else if(num1===2){
+    return num2-num3
+  }else if(num1===3){
+    return num2*num3
+  }else if(num1===4){
+    return num2/num3
+  }else{
+    return "Has salido correctamente del programa"
+  }
+}else{
+  return "No has introducido un numero correcto. El numero debe estar entre 1 y 5"
+}
+}
+console.log(seleccionarNumeroMenu(2,5,4))
 module.exports = { seleccionarNumeroMenu };

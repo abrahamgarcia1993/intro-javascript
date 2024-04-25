@@ -7,8 +7,20 @@ Se dice que un string es palindromo cuando se puede leer igual de izquierda a de
  * string es palindromo cuando se puede leer igual de izquierda a derecha que de derecha a izquierda
  */
 
-function palindrome() {
+function palindrome(palindromo) {
   //Escribe tu codigo aqui
+  let newPalindromo= palindromo.split("")
+  let inverso=[]
+  for(let i=0; i<newPalindromo.length; i++){
+    inverso.push(newPalindromo[newPalindromo.length -(i+1)])
+  }
+  for(let i=0; i<newPalindromo.length; i++){
+    if(newPalindromo[i]!= inverso[i]){
+      return false
+    }
+  }
+  return true
 }
-
+console.log(palindrome("calac"))
+console.log(palindrome("hola"))
 module.exports = { palindrome };

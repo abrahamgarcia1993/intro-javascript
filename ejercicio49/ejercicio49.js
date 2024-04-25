@@ -14,28 +14,69 @@ const cakes = [55, 40, 78, 45, 67, 21, 30, 90, 85, 73, 58, 25];
 const drinks = [45, 67, 21, 30, 55, 40, 78, 45, 80, 66, 39, 74];
 const preservedFood = [78, 45, 80, 66, 39, 74, 67, 21, 30, 90, 85, 73];
 
-function getMaxCost() {
+function getMaxCost(pepito) {
   //Escribe tu codigo aqui
+  let primer=[]
+  for(let i=0; i<pepito.length; i++){
+    primer.push(pepito[i])
+  }
+  let newArray=pepito.sort((a,b)=>b-a)
+
+  let max=primer.find((index)=>index==newArray[0])
+  let month=primer.findIndex((element)=>element===pepito[0]) 
+  month+=1
+  return {month, max}
+}
+console.log(getMaxCost(cakes))
+function getMinCost(pepito) {
+  //Escribe tu codigo aqui
+  let primer=[]
+  for(let i=0; i<pepito.length; i++){
+    primer.push(pepito[i])
+  }
+  let newArray=pepito.sort((a,b)=>a-b)
+
+  let min=primer.find((index)=>index==newArray[0])
+  let month=primer.findIndex((element)=>element===pepito[0]) 
+  month+=1
+  return { min,month}
 }
 
-function getMinCost() {
+function getAverageCost(array) {
   //Escribe tu codigo aqui
+  let suma=0;
+  let contador=0;
+  let avg;
+  for(let i=0;i<array.length; i++){
+    suma+=array[i];
+    contador++
+  }
+  avg=suma/contador
+  return avg
 }
 
-function getAverageCost() {
+function getLastCost(array) {
   //Escribe tu codigo aqui
+  for(let i=0; i<array.length; i++){
+    if(array[array.length-1]){
+      return array[array.length-1]
+    }
+  }
 }
-
-function getLastCost() {
-  //Escribe tu codigo aqui
-}
-
+/* 
 function getPriceDecember() {
   //Escribe tu codigo aqui
 }
-
-function getMinPriceDecember() {
+ */
+function getMinPriceDecember(n1,n2,n3) {
   //Escribe tu codigo aqui
+  if(n1[11]<n2[11] && n1[11]<n3[11]){
+    return n1[11]
+  }else if(n2[11]<n3[11]){
+    return n2[11]
+  }else{
+    return n3[11]
+  }
 }
 
 module.exports = {

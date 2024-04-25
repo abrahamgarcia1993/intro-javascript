@@ -9,11 +9,22 @@
 
 function generateRandomNumber() {
   //Escribe tu codigo aqui
+  let aleatorio=Math.floor(Math.random()*10)+1
+  return aleatorio
 }
+
 
 function playGame(randomNumber, arrayNum) {
   //Escribe tu codigo aqui
+  let i=0
+  let contador=1
+  while(arrayNum[i]!=randomNumber){
+    i++
+    contador++
+  }
+  return `Has acertado al ${contador} intento`
 }
+console.log(playGame(generateRandomNumber(),[1,2,3,4,5,6,7,9,10]))
 module.exports = {
   generateRandomNumber,
   playGame,

@@ -10,10 +10,22 @@
 
 function generateRandomArray() {
   //Escribe tu codigo aqui
+  let random=[]
+  for(let i=0; i<10; i++){
+    random.push(Math.floor(Math.random()*15)+1)
+  }
+  return random
 }
-
-function findNumberInArray() {
+let numRandom=generateRandomArray()
+function findNumberInArray(array, numero) {
   //Escribe tu codigo aqui
+  for(let i=0; i<array.length; i++){
+    if(array[i]==numero){
+      return true
+    }
+  }
+  return false
 }
+console.log(findNumberInArray(numRandom, 6))
 
 module.exports = { findNumberInArray, generateRandomArray };

@@ -7,8 +7,10 @@
  * '<' y '>'
  */
 
-function ordenarArray() {
+function ordenarArray(array) {
   //Escribe tu codigo aqui
+  let newArray=array.sort((a,b)=>b-a)
+  return newArray
 }
 
 module.exports = { ordenarArray };
